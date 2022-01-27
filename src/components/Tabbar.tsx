@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Dimensions,
   TouchableOpacity,
+  SafeAreaView,
   Text,
   View,
 } from 'react-native';
@@ -14,7 +15,7 @@ import Lang from '../localization';
 
 const {width} = Dimensions.get('window');
 const TabBar = () => {
-  const [index, setIndex] = useState(1);
+  const [index, setIndex] = useState(0);
   const navigation = useNavigation();
   const onPressTab = (
     navigateTo:
@@ -32,7 +33,7 @@ const TabBar = () => {
     setIndex(index);
   };
   return (
-    <View style={styles.tabBarContainer}>
+    <SafeAreaView style={styles.tabBarContainer}>
       <TouchableOpacity
         style={styles.tabDesign}
         onPress={() => onPressTab('HomeScreen', 0)}>
@@ -147,7 +148,7 @@ const TabBar = () => {
           {Lang.tabBar.profile}
         </Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 };
 

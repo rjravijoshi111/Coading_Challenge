@@ -13,7 +13,6 @@ import styles from './styles';
 import Lang from '../../localization';
 function SpedingLimitScreen() {
   const navigation = useNavigation();
-  const onPressContinueButton = () => {};
   const [limitValue, setLimitValue] = useState<string>('');
   const dispatch = useDispatch();
   const Data = [{amount: '5,000'}, {amount: '10,000'}, {amount: '20,000'}];

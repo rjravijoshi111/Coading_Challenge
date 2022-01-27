@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {View, Text, ScrollView, Image, TouchableOpacity} from 'react-native';
 import {useSelector} from 'react-redux';
 import {appImages} from '../../styles/appImages';
@@ -63,7 +63,7 @@ function DebitCardScreen() {
         </View>
       </View>
       <View style={styles.bottomView} />
-      <ScrollView contentContainerStyle={{marginTop: 175, paddingBottom:175}}>
+      <ScrollView contentContainerStyle={styles.scrollViewstyle}>
         <View style={styles.cardContainer}>
           <View style={styles.cardNumberView}>
             <TouchableOpacity

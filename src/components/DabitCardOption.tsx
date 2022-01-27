@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { View, StyleSheet, Text, Image, Switch } from "react-native";
-import { BLUE_TEXT, GRAY, LIGHT_GREEN, FONTS, } from "../styles";
+import { BLUE_TEXT, GRAY, LIGHT_GREEN, FONTS, WINDOW_WIDTH, } from "../styles";
 import { useDispatch } from "react-redux";
 import {
   SetSpedingLimit,
@@ -74,12 +74,13 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
   },
   imgView: {
-    width: 30,
+    Width: WINDOW_WIDTH * .09,
+    height: WINDOW_WIDTH * .09,
     aspectRatio: 1,
     marginRight: 5,
   },
   img: { width: "100%", height: "100%", resizeMode: "contain" },
-  subView: { flex: 1 },
+  subView: { flex: 1, marginLeft: 10 },
   txtTitle: {
     fontFamily: FONTS.fontFamily_medium,
     fontSize: FONTS.fontSize_13,

@@ -15,6 +15,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: DARK_BLUE,
   },
+  scrollViewstyle:{
+    marginTop: (WINDOW_HEIGHT * .20), paddingBottom:175
+  },
   topView: {
     paddingHorizontal: 20,
     position: 'absolute',
@@ -131,7 +134,7 @@ const styles = StyleSheet.create({
   },
   cardNumberView: {
     paddingHorizontal: 10,
-    marginTop: -150,
+    marginTop: -(WINDOW_HEIGHT * .14),
     right: 0,
     alignSelf: 'flex-end',
     justifyContent: 'center',

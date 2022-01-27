@@ -16,7 +16,7 @@ export default function _TabNavigator(props) {
       screenOptions={{
         headerShown: false
       }}
-      initialRouteName={'DebitCardScreen'}>
+      initialRouteName={'HomeScreen'}>
       <Tab.Screen name="HomeScreen" component={HomeScreen} />
       <Tab.Screen name="DebitCardScreen" component={DebitCardScreen} />
       <Tab.Screen name="CreditScreen" component={CreditScreen} />
