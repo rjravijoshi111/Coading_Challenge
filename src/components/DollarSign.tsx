@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
-import {LIGHT_GREEN, WHITE} from '../styles';
+import {LIGHT_GREEN, WHITE, FONTS} from '../styles';
 
 const DollarSign = () => {
   return (
@@ -21,5 +21,9 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     backgroundColor: LIGHT_GREEN,
   },
-  title: {color: WHITE, fontSize: 11},
+  title: {
+    fontFamily: FONTS.fontFamily_regular,
+    fontSize: FONTS.fontSize_12,
+    color: WHITE
+  },
 });

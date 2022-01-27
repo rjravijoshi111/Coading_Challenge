@@ -1,5 +1,4 @@
 import axios, {create} from 'axios';
-import {DeviceEventEmitter, Alert} from 'react-native';
 
 export const HTTP_METHODS = {
   GET: "GET",
@@ -7,58 +6,6 @@ export const HTTP_METHODS = {
   PUT: "PUT",
   DELETE: "DELETE",
 };
-/**
- * Performance Monitoring with Axios with Firebase
- */
-axios.interceptors.request.use(async function (config) {
-  try {
-    const httpMetric = perf().newHttpMetric(config.url, config.method);
-    config.metadata = {httpMetric};
-
-    // add any extra metric attributes, if required
-    // httpMetric.putAttribute('userId', '12345678');
-
-    await httpMetric.start();
-  } finally {
-    return config;
-  }
-});
-
-axios.interceptors.response.use(
-  async function (response) {
-    try {
-      // Request was successful, e.g. HTTP code 200
-
-      const {httpMetric} = response?.config?.metadata;
-
-      // add any extra metric attributes if needed
-      // httpMetric.putAttribute('userId', '12345678');
-
-      httpMetric.setHttpResponseCode(response.status);
-      httpMetric.setResponseContentType(response.headers['content-type']);
-      await httpMetric?.stop();
-    } finally {
-      return response;
-    }
-  },
-  async function (error) {
-    try {
-      // Request failed, e.g. HTTP code 500
-
-      const {httpMetric} = error.config.metadata;
-
-      // add any extra metric attributes if needed
-      // httpMetric.putAttribute('userId', '12345678');
-
-      httpMetric.setHttpResponseCode(error.response.status);
-      httpMetric.setResponseContentType(error.response.headers['content-type']);
-      await httpMetric?.stop();
-    } finally {
-      // Ensure failed requests throw after interception
-      return Promise.reject(error);
-    }
-  },
-);
 
 /**
  * axios object

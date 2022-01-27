@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {View, Text, FlatList, Image, Alert} from 'react-native';
 import {useDispatch} from 'react-redux';
 import ButtonWithStatus from '../../components/SaveButton';
-import {WHITE} from '../../styles';
 import {appImages} from '../../styles/appImages';
 import Header from '../../components/Header';
 import DollarSign from '../../components/DollarSign';
