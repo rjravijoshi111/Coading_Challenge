@@ -8,7 +8,7 @@ import styles from './styles';
 function ProfileScreen() {
   return (
     <View style={styles.container}>
-      <Text>{"Profile Screen"}</Text>
+      <Text style={styles.titleText}>{"Profile Screen"}</Text>
     </View>
   );
 }

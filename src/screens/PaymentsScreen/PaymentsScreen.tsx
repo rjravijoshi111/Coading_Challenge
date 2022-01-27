@@ -8,7 +8,7 @@ import styles from './styles';
 function PaymentsScreen() {
   return (
     <View style={styles.container}>
-      <Text>{"Payments Screen"}</Text>
+      <Text style={styles.titleText}>{"Payments Screen"}</Text>
     </View>
   );
 }

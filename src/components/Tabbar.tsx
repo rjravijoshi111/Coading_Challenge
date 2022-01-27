@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {appImages} from '../styles/appImages';
-import {LIGHT_GREEN, WHITE, TAB_TEXT_COLOR,FONTS} from '../styles';
+import {LIGHT_GREEN, WHITE, TAB_TEXT_COLOR, FONTS} from '../styles';
 import Lang from '../localization';
 
 const {width} = Dimensions.get('window');
@@ -26,17 +26,24 @@ const TabBar = () => {
           params: never;
           merge?: boolean | undefined;
         },
+    index: number,
   ) => {
     navigation.navigate(navigateTo);
+    setIndex(index);
   };
   return (
     <View style={styles.tabBarContainer}>
       <TouchableOpacity
         style={styles.tabDesign}
-        onPress={() => onPressTab('HomeScreen')}>
+        onPress={() => onPressTab('HomeScreen', 0)}>
         <Image
           source={index == 0 ? appImages.home : appImages.home}
-          style={styles.tabImage}
+          style={[
+            styles.tabImage,
+            {
+              tintColor: index == 0 ? LIGHT_GREEN : TAB_TEXT_COLOR,
+            },
+          ]}
           resizeMode={'contain'}
         />
         <Text
@@ -52,12 +59,17 @@ const TabBar = () => {
 
       <TouchableOpacity
         style={styles.tabDesign}
-        onPress={() => onPressTab('DebitCardScreen')}>
+        onPress={() => onPressTab('DebitCardScreen', 1)}>
         <Image
           source={
             index == 1 ? appImages.selected_debit : appImages.selected_debit
           }
-          style={styles.tabImage}
+          style={[
+            styles.tabImage,
+            {
+              tintColor: index == 1 ? LIGHT_GREEN : TAB_TEXT_COLOR,
+            },
+          ]}
           resizeMode={'contain'}
         />
         <Text
@@ -73,10 +85,12 @@ const TabBar = () => {
 
       <TouchableOpacity
         style={styles.tabDesign}
-        onPress={() => onPressTab('PaymentsScreen')}>
+        onPress={() => onPressTab('PaymentsScreen', 2)}>
         <Image
           source={index == 2 ? appImages.payments : appImages.payments}
-          style={styles.tabImage}
+          style={[styles.tabImage,{
+            tintColor: index == 2 ? LIGHT_GREEN : TAB_TEXT_COLOR,
+          }]}
           resizeMode={'contain'}
         />
         <Text
@@ -92,10 +106,12 @@ const TabBar = () => {
 
       <TouchableOpacity
         style={styles.tabDesign}
-        onPress={() => onPressTab('CreditScreen')}>
+        onPress={() => onPressTab('CreditScreen', 3)}>
         <Image
           source={index == 3 ? appImages.credit : appImages.credit}
-          style={styles.tabImage}
+          style={[styles.tabImage,{
+            tintColor: index == 3 ? LIGHT_GREEN : TAB_TEXT_COLOR,
+          }]}
           resizeMode={'contain'}
         />
         <Text
@@ -112,11 +128,13 @@ const TabBar = () => {
       <TouchableOpacity
         style={styles.tabDesign}
         onPress={() => {
-          onPressTab('ProfileScreen');
+          onPressTab('ProfileScreen', 4);
         }}>
         <Image
           source={index == 4 ? appImages.profile : appImages.profile}
-          style={styles.tabImage}
+          style={[styles.tabImage,{
+            tintColor: index == 4 ? LIGHT_GREEN : TAB_TEXT_COLOR,
+          }]}
           resizeMode={'contain'}
         />
         <Text

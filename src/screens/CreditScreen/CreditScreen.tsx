@@ -8,7 +8,7 @@ import styles from './styles';
 function CreditScreen() {
   return (
     <View style={styles.container}>
-      <Text>{"Credit Screen"}</Text>
+      <Text style={styles.titleText}>{"Credit Screen"}</Text>
     </View>
   );
 }

@@ -85,8 +85,9 @@ function DebitCardScreen() {
                 {isShowCardNumber ? 'Hide' : 'Show'} card number
               </Text>
             </TouchableOpacity>
+            <AtmCard isHideCardNumber={!isShowCardNumber} />
           </View>
-          <AtmCard isHideCardNumber={!isShowCardNumber} />
+          
           {spedingLimit != undefined && <View style={styles.spendingLimitMainView}>
             <View style={styles.spendingLimitView}>
               <Text style={styles.spendingLimitTitle}>{Lang.debitCardScreen.debit_card_spending_limit}</Text>

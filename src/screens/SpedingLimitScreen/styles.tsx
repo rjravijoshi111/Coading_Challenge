@@ -122,7 +122,13 @@ const styles = StyleSheet.create({
     borderBottomColor: GRAY,
     flexDirection: 'row',
   },
-  txtFieldAmount: {flex: 1, fontSize: 18, fontWeight: '600', width: '80%'},
+  txtFieldAmount: {
+    fontFamily: FONTS.fontFamily_semi_bold,
+    fontSize: FONTS.fontSize_12,
+    color: DARK_GREY,
+    padding: 0,
+    height: 45,
+    flex: 1,  width: '80%'},
   txtWeekly: {
     fontFamily: FONTS.fontFamily_regular,
     fontSize: FONTS.fontSize_11,

@@ -8,7 +8,7 @@ import styles from './styles';
 function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text>{"Home Screen"}</Text>
+      <Text style={styles.titleText}>{"Home Screen"}</Text>
     </View>
   );
 }
