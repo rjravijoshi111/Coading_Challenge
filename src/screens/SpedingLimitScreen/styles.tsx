@@ -3,17 +3,26 @@ import {
   DARK_BLUE,
   DARK_GREY,
   GRAY,
-  GRAY_TEXT,
   LIGHT_GREEN,
   WHITE,
   WINDOW_HEIGHT,
   WINDOW_WIDTH,
+  FONTS
 } from '../../styles';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: DARK_BLUE,
+  },
+  headingTitle:{
+    fontFamily: FONTS.fontFamily_bold,
+    fontSize: FONTS.fontSize_20,
+    color: WHITE,
+  },
+  noteText:{
+    fontFamily: FONTS.fontFamily_medium,
+    fontSize: FONTS.fontSize_12_5,
   },
   subView: {
     width: '100%',
@@ -114,7 +123,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   txtFieldAmount: {flex: 1, fontSize: 18, fontWeight: '600', width: '80%'},
-  txtWeekly: {fontSize: 13, color: GRAY_TEXT},
+  txtWeekly: {
+    fontFamily: FONTS.fontFamily_regular,
+    fontSize: FONTS.fontSize_11,
+    color: 'rgba(34,34,34,0.4)'
+  },
+  amountText:{
+    fontFamily: FONTS.fontFamily_semi_bold,
+    fontSize: FONTS.fontSize_12,
+    color: LIGHT_GREEN
+  }
 });
 
 export default styles;

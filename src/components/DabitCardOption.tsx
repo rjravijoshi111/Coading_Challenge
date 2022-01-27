@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { View, StyleSheet, Text, Image, Switch } from "react-native";
-import { BLUE_TEXT, GRAY, LIGHT_GREEN } from "../styles";
+import { BLUE_TEXT, GRAY, LIGHT_GREEN, FONTS, } from "../styles";
 import { useDispatch } from "react-redux";
 import {
   SetSpedingLimit,
@@ -81,12 +81,15 @@ const styles = StyleSheet.create({
   img: { width: "100%", height: "100%", resizeMode: "contain" },
   subView: { flex: 1 },
   txtTitle: {
-    fontSize: 12,
-    fontWeight: "600",
+    fontFamily: FONTS.fontFamily_medium,
+    fontSize: FONTS.fontSize_13,
     color: BLUE_TEXT,
     marginBottom: 2,
   },
-  txtDetails: { fontSize: 12, color: "rgba(34,34,34,0.6)" },
+  txtDetails: { 
+    fontFamily: FONTS.fontFamily_regular,
+    fontSize: FONTS.fontSize_12,
+    color: "rgba(34,34,34,0.6)" },
   switchMainView: {
     height: "100%",
     alignSelf: "flex-end",

@@ -1,5 +1,8 @@
 import React from 'react';
 import {StyleSheet, TouchableOpacity, Text, GestureResponderEvent} from 'react-native';
+import {
+  FONTS
+} from '../styles';
 
 const ButtonWithStatus = (props: { onPress: ((event: GestureResponderEvent) => void) | undefined; }) => {
   return (
@@ -21,6 +24,8 @@ const styles = StyleSheet.create({
     borderRadius: 30,
   },
   btnText: {
+    fontFamily: FONTS.fontFamily_semi_bold,
+    fontSize: FONTS.fontSize_13,
     width: '100%',
     textAlign: 'center',
     color: 'white',

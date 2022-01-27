@@ -55,8 +55,8 @@ function DebitCardScreen() {
     <View style={styles.container}>
       <View style={styles.topView}>
         <Header onBackPress={undefined} />
-        <Text style={styles.txtDebit}>Debit Card</Text>
-        <Text style={styles.txtAvailable}>Available balance</Text>
+        <Text style={styles.txtDebit}>{Lang.debitCardScreen.debit_card}</Text>
+        <Text style={styles.txtAvailable}>{Lang.debitCardScreen.available_balance}</Text>
         <View style={styles.mainViewAvailableBalance}>
           <DollarSign />
           <Text style={styles.txtAVailableBalance}>3,000</Text>

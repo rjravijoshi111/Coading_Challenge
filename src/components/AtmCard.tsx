@@ -5,7 +5,7 @@ import {
   Text,
   Image,
 } from 'react-native';
-import {LIGHT_GREEN, WINDOW_WIDTH} from '../styles';
+import {LIGHT_GREEN, WINDOW_WIDTH, FONTS} from '../styles';
 import {appImages} from '../styles/appImages';
 
 const AtmCard = ({isHideCardNumber = false}) => {
@@ -39,18 +39,18 @@ export default AtmCard;
 const styles = StyleSheet.create({
   creditCardMainView: {
     width: WINDOW_WIDTH - 40,
-    aspectRatio: 1.55,
+    aspectRatio: 1.40,
     backgroundColor: LIGHT_GREEN,
     borderRadius: 10,
-    marginTop: -10,
+    marginTop: -10
   },
   creditCardNumberText: {
     color: 'white',
     marginTop: '8%',
     marginLeft: '10%',
     width: '80%',
-    fontSize: 20,
-    fontWeight: 'bold',
+    fontFamily: FONTS.fontFamily_bold,
+    fontSize: FONTS.fontSize_18,
   },
   aspireMainView: {
     width: '35%',
@@ -64,26 +64,29 @@ const styles = StyleSheet.create({
     marginTop: '7%',
     marginLeft: '10%',
     width: '80%',
-    fontSize: 16,
+    fontFamily: FONTS.fontFamily_semi_bold,
+    fontSize: FONTS.fontSize_14,
   },
   txtExpireDate: {
     color: 'white',
     marginTop: '4%',
     marginLeft: '10%',
-    fontSize: 12,
+    fontFamily: FONTS.fontFamily_semi_bold,
+    fontSize: FONTS.fontSize_11,
   },
   txtCVV: {
     color: 'white',
     marginTop: '4%',
     width: '80%',
     marginLeft: '10%',
-    fontSize: 12,
+    fontFamily: FONTS.fontFamily_semi_bold,
+    fontSize: FONTS.fontSize_11,
   },
   visaView: {
     width: '35%',
     height: '10%',
     marginLeft: '65%',
-    marginTop: '5%',
+    marginTop: '5%'
   },
   imgVisa: {width: '100%', height: '100%', resizeMode: 'contain'},
 });

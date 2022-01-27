@@ -7,6 +7,7 @@ import {
   GRAY_TEXT,
   WINDOW_HEIGHT,
   WINDOW_WIDTH,
+  FONTS,
 } from '../../styles';
 
 const styles = StyleSheet.create({
@@ -94,13 +95,15 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   txtDebit: {
-    fontSize: 25,
+    fontFamily: FONTS.fontFamily_bold,
+    fontSize: FONTS.fontSize_20,
     color: WHITE,
     fontWeight: 'bold',
     marginTop: -20,
   },
   txtAvailable: {
-    fontSize: 13,
+    fontFamily: FONTS.fontFamily_medium,
+    fontSize: FONTS.fontSize_13,
     color: WHITE,
     marginTop: 20,
   },
@@ -110,7 +113,8 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   txtAVailableBalance: {
-    fontSize: 22,
+    fontFamily: FONTS.fontFamily_bold,
+    fontSize: FONTS.fontSize_22,
     color: WHITE,
     fontWeight: 'bold',
     marginLeft: 12,
@@ -147,7 +151,10 @@ const styles = StyleSheet.create({
     marginRight: 5,
   },
   imgCardShowHide: {width: '100%', height: '100%', resizeMode: 'contain'},
-  txtCardShowHide: {fontSize: 12, fontWeight: '600', color: LIGHT_GREEN},
+  txtCardShowHide: {
+    fontFamily: FONTS.fontFamily_semi_bold,
+    fontSize: FONTS.fontSize_12,
+    color: LIGHT_GREEN},
   spendingLimitMainView: {
     width: '100%',
     marginTop: 20,
@@ -158,15 +165,18 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   spendingLimitTitle: {
-    fontSize: 13,
+    fontFamily: FONTS.fontFamily_medium,
+    fontSize: FONTS.fontSize_13,
     color: GRAY_TEXT,
   },
   remainingLimitText: {
-    fontSize: 13,
+    fontFamily: FONTS.fontFamily_semi_bold,
+    fontSize: FONTS.fontSize_12,
     color: LIGHT_GREEN,
   },
   limitText: {
-    fontSize: 13,
+    fontFamily: FONTS.fontFamily_semi_bold,
+    fontSize: FONTS.fontSize_12,
     color: DARK_GREY,
   },
   mainProgreessView: {

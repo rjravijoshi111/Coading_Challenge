@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {
-  Keyboard,
   Image,
   StyleSheet,
   Dimensions,
@@ -10,7 +9,7 @@ import {
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import {appImages} from '../styles/appImages';
-import {LIGHT_GREEN, WHITE, TAB_TEXT_COLOR} from '../styles';
+import {LIGHT_GREEN, WHITE, TAB_TEXT_COLOR,FONTS} from '../styles';
 import Lang from '../localization';
 
 const {width} = Dimensions.get('window');
@@ -139,7 +138,8 @@ export default TabBar;
 const styles = StyleSheet.create({
   tabText: {
     color: TAB_TEXT_COLOR,
-    fontSize: 12,
+    fontFamily: FONTS.fontFamily_semi_bold,
+    fontSize: FONTS.fontSize_11,
     marginTop: 5,
   },
   tabImage: {
@@ -147,7 +147,6 @@ const styles = StyleSheet.create({
     width: 20,
   },
   tabDesign: {
-    // flexDirection: 'row',
     alignItems: 'center',
     padding: 5,
     flex: 1,

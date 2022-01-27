@@ -14,6 +14,8 @@ export default {
     profile: 'Profile',
   },
   debitCardScreen: {
+    debit_card: "Debit Card",
+    available_balance: "Available balance",
     top_up_account: 'Top-up account',
     deposite_money_to: 'Deposit money to your account to use with card',
     weekly_spending_limit: 'Weekly spending limit',

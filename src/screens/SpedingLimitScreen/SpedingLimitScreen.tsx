@@ -26,7 +26,7 @@ function SpedingLimitScreen() {
         }}
         style={styles.amountView}>
         <View>
-          <Text style={{color: '#01D167'}}>S$ {props?.item?.amount}</Text>
+          <Text style={styles.amountText}>S$ {props?.item?.amount}</Text>
         </View>
       </TouchableOpacity>
     );
@@ -42,11 +42,7 @@ function SpedingLimitScreen() {
           }}
         />
         <Text
-          style={{
-            fontSize: 25,
-            color: WHITE,
-            fontWeight: 'bold',
-          }}>
+          style={styles.headingTitle}>
           {Lang.spendingLimit.spending_limit}
         </Text>
       </View>
@@ -57,7 +53,7 @@ function SpedingLimitScreen() {
             <Image style={styles.imageMeter} source={appImages.meterIcon} />
           </View>
           <View style={{justifyContent: 'center', marginLeft: 10}}>
-            <Text style={{fontSize: 14}}>
+            <Text style={styles.noteText}>
               {Lang.spendingLimit.set_weekly_limit}
             </Text>
           </View>
